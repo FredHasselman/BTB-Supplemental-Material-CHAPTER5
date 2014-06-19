@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{multirow}
+
+\begin{document}
+\begin{align*}
+Given\ an\ observed\ response\ & sequence\ Y_k^{(t)},\ and\ simulated\ \Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS} \right\rangle}:\\
+\mathfrak{L} \left(\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS} \right\rangle}\Vert Y_{k}^{(t)} \right) &= \prod_{t=1}^{|Y^{(t)}|} f \left(Y_{k}^{(t)}\Vert\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \right)\\
+\\
+let\ \ \ &\left\{ {\scriptstyle \begin{array}{ r c l } 
+N &=& 40 \\ 
+\varepsilon &=& -.5,\ldots,.5 \\
+n_c &=& 10,\ldots,30 \\
+\gamma_{CS} &=& 0,\ldots,1 \\
+\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS} \right\rangle} &=& \{\Phi,\Theta,\Pi\}\\
+ & &\\ 
+\lambda_{\pi}^{(t=1)} &=& P\left(\theta^{(t=1)}=\theta_{\pi}^{(t=1)} |Y_{k}^{(t=1)}\right)=\pi_i\\
+\lambda_{i}^{(t)}&=& P\left(\theta^{(t)}=\theta_{i}^{(t)} |Y_{k}^{(t)}\right) \\
+\lambda_{j}^{(t+1)}&=& P\left(\theta^{(t+1)}=\theta_{j}^{(t+1)} |Y_{k}^{(t+1)}\right) \\
+\end{array}} \right. \\
+\\
+Assume:\\
+\forall \ Y_k^{(t)} &\in \{/bAk/,/dAk/\} : V(x,y)_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \vdash \lambda_{\pi ij}^{(t)}\ \therefore\\
+\theta^{(t)} &= \underset{\pi ij}{\operatorname{arg\,max}}\ \lambda_{\pi ij}^{(t)}\\
+\\
+Then\ the\ Maximum\ Likelihood\ & Estimate\ of\ the\ tuple\ \left\langle \varepsilon,n_c,\gamma_{CS} \right\rangle\ given\ Y_k^{(t)}\ is\ defined\ as:\\
+\mathfrak{L} \left(\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \Vert Y_{k}^{(1)},…,Y_{k}^{(N)} \right) &= \sideset{_{m=1}^{N-1}}{_{n=2}^{N}}\prod \left(\phi_{\lambda_j^{(m)} \rightarrow \lambda_j^{(n)}}\ \theta_{\lambda_{j}}^{(n)}\ \pi_i \right)
+\\  
+\ln\ \mathfrak{L} \left(\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \Vert Y_{k}^{(1)},…,Y_{k}^{(N)} \right) &=\sideset{_{m=1}^{N-1}}{_{n=2}^{N}}\sum \ln\  \left(\phi_{\lambda_j^{(m)} \rightarrow \lambda_j^{(n)}}\ \theta_{\lambda_{j}}^{(n)}\ \pi_i \right)\ \therefore\\
+\left\langle\varepsilon,n_c,\gamma_{CS}\right\rangle_{MLE} =\underset{\varepsilon,n_c,\gamma_{CS}}{\operatorname{arg\,max}}&\ \ln\ \mathfrak{L} \left(\Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \Vert Y_{k}^{(1)},…,Y_{k}^{(N)} \right)\\
+\left\langle\varepsilon,n_c,\gamma_{CS}\right\rangle_{MLE} =\underset{\varepsilon,n_c,\gamma_{CS}}{\operatorname{arg\,max}}& \sum_{n=1}^{N}\ \ln \ P \left(Y_{k}^{(1)},…,Y_{k}^{(N)}\vert \Lambda_{\left\langle \varepsilon,n_c,\gamma_{CS}\right\rangle} \right)\\
+\end{align*}
+Box 5.2. Definition of the Maximum Likelihood Estimator used to estimate  parameters $\varepsilon$ and $\gamma_{CS}$ of the 2D potential model for each observed experimental trial sequence. See text for details.
+\end{document}

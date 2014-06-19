@@ -1,0 +1,25 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{multirow}
+
+\begin{document}
+\begin{align*}
+\Large
+\begin{tabular}{ c c | c | c | } 
+& \multicolumn{1}{c}{} & \multicolumn{2}{c}{\bf{Expected}} \\
+& & different & same \\ \cline{2-4}
+\multirow{2}{*}{\bf{Observed}} & different   &  TP     & FP        \\ \cline{2-4}
+& same &  FN     & TN         \\ \cline{2-4} 
+\end{tabular}&
+\small
+\\
+\\
+True\ Positive\ Rate\ (Sensitivity,\ Recall) = \frac{TP}{TP+FN} &\\
+True\ Negative\ Rate\ (Specificity) = \frac{TN}{TN+FP} &\\
+Positive\ Predictive\ Value\ (Precision) = \frac{TP}{TP+FP} &\\ 
+\end{align*}
+Figure 5.5. Summary of measures extracted from a confusion matrix. These measures are used to construct the ROC and PR curves.
+\end{document}

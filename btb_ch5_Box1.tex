@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{multirow}
+
+\begin{document}
+\begin{align*}
+\\
+\\
+Number\ of\ simulated\ stimuli\ -\ N &= \{40\}\\ 
+Trial\ indices\ - \ m&=1,\ldots,(N - 1)\ and\ n=2,\ldots,N\\
+\\
+Hidden\ states\ -\ Q &= \{ q_i \},\ i=1,\ldots,4\ :\\
+q_i &\in \left\{ \mbox{I(+,+),II(-,+),III(-,-),IV(+,-)} \right\}\ of\ V(x,y)_{ \left\langle \varepsilon, n_c, \gamma_{CS}\right\rangle }\\
+Transition\ probabilities\ -\ \Phi &= \left\{\phi_{i\rightarrow j} = P(q_j^{(n)}\vert q_i^{(m)}) \right\}\\ 
+\\
+\Phi_{q_i} \underrightarrow{(m,n)}_{q_j} & = \begin{bmatrix} P_{q_1,q_1}^{(m,n)} & \cdots & P_{q_1,q_j}^{(m,n)} \\ \vdots & \ddots & \vdots \\ P_{q_i,q_1}^{(m,n)} & \cdots & P_{q_i,q_j}^{(m,n)} \end{bmatrix}\ :\ \sum_{q_j=1}^{|Q|}P_{q_i,q_j}^{(m,n)}=1\\
+\\
+\\
+Observable\ emissions\ -\ O &= \{o_k\},\ k=1,\ldots,2\ :\ o_k \in \{/bAk/, /dAk/\} \\
+Emission\ probabilities\ -\ \Theta &= \left\{\theta_{jk} = \theta_j(o_k) = P(o_k^{(n)} \vert q_j^{(n)}) \right\} \\
+\\
+\Theta_{o_k,q_j}^{(n)} & =  \begin{bmatrix} P_{o_1,q_1}^{(n)} & \cdots & P_{o_k,q_1}^{(n)} \\ \vdots & \ddots & \vdots \\ P_{o_1,q_j}^{(n)} & \cdots & P_{o_k,q_j}^{(n)} \end{bmatrix}\ :\ \sum_{o_k=1}^{|O|}P_{o_k,q_j}^{(n)}=1\\
+\\
+Initial\ state\ probabilities\ -\ \Pi &= \{\pi_i = P(q_i^{(m=1)}) \}
+\\
+\\
+Time-dependent\ HMM\ -\ \Lambda &= \{\Phi,\Theta,\Pi\}\\
+\\
+\end{align*}
+Box 5.1.Definition of the Hidden Markov Model with time-dependent transition and emission probabilities used to simulate the experiments. See text for details.
+\end{document}
